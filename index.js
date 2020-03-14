@@ -1,3 +1,4 @@
+// @ts-nocheck
 // ⭐️ Example Challenge START ⭐️
 
 /**
@@ -159,6 +160,17 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * [2] Invoking `lowerCaseStrings` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
 
+function lowerCaseStrings(strings) {
+  const lower = [];
+  strings.forEach((arrItem) => {
+  lower.push(arrItem.toLowerCase(strings))
+
+});
+
+return lower;
+}
+
+
 
 /**
  * ### Challenge `isItAnApple`
@@ -175,9 +187,17 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(strings) {
+  const isApple = strings.map((arrItem) => {
+    if (arrItem === "apple"){
+    return true;
+  } else {
+    return false;
+  }
+});
+return isApple;
 }
+
 
 /**
  * ### Challenge `removeApple`
@@ -195,8 +215,12 @@ function isItAnApple(/* code here */) {
  * 
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
-function removeApple(/* code here */) {
-  /* code here */
+function removeApple(strings) {
+  let byeApple = strings.filter((item) => {
+    return (item != 'apple');
+  });
+
+  return byeApple;
 }
 
 /**
@@ -218,6 +242,7 @@ function stringSmash(/* code here */) {
   /* code here */
 }
 
+
 // A local community center is holding a fund raising 5k fun run and has invited
 // 50 small businesses to make a small donation on their behalf for some much needed
 // updates to their facilities. Each business has assigned a representative
@@ -233,9 +258,14 @@ function stringSmash(/* code here */) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(runners) {
+  let fullName = [];
+  runners.forEach(function(items) {
+    return fullName.push(`${items.last_name}, ${items.first_name}`);
+  });
 }
+
+
 
 /**
  * ### Challenge `firstNamesAllCaps`
@@ -267,8 +297,8 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
+function getRunnersByTShirtSize() {
+  
 }
 
 /**
