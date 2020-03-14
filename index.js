@@ -239,7 +239,10 @@ function removeApple(strings) {
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
 function stringSmash(strings) {
-  /* code here */
+  let smash = strings.reduce(function(accumulator, arrItem) {
+    return accumulator + arrItem;
+  }, "");
+  return smash;
 }
 
 
