@@ -238,7 +238,7 @@ function removeApple(strings) {
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
+function stringSmash(strings) {
   /* code here */
 }
 
@@ -261,11 +261,12 @@ function stringSmash(/* code here */) {
 function getFullNames(runners) {
   let fullName = [];
   runners.forEach(function(items) {
-    return fullName.push(`${items.last_name}, ${items.first_name}`);
+    fullName.push(`${items.last_name}, ${items.first_name}`);
   });
+
+  return fullName;
+
 }
-
-
 
 /**
  * ### Challenge `firstNamesAllCaps`
@@ -279,8 +280,11 @@ function getFullNames(runners) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+function firstNamesAllCaps(runners) {
+  let allCaps = runners.map(function(items) {
+    return items.first_name.toUpperCase();
+  })
+  return allCaps;
 }
 
 /**
@@ -297,8 +301,11 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize() {
-  
+function getRunnersByTShirtSize(runners, tShirtSize) {
+  let size = runners.filter(function(items) {
+    return items.shirt_size === tShirtSize;
+  })
+  return size;
 }
 
 /**
